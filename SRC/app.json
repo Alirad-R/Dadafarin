@@ -32,14 +32,14 @@
     },
     "extra": {
       "eas": {
-        "projectId": "f3b394a8-3960-4dc2-be79-68cbba0851f6"
+        "projectId": "98a82db4-cb85-4e04-849d-3a8d35b9c951"
       },
       "router": {
         "origin": false
       }
     },
     "updates": {
-      "url": "https://u.expo.dev/f36a631d-a4fc-4389-b325-84364c9deb7e"
+      "url": "https://u.expo.dev/98a82db4-cb85-4e04-849d-3a8d35b9c951"
     },
     "plugins": [
       "expo-router",

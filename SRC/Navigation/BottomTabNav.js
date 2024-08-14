@@ -23,11 +23,9 @@ function BottomTabNav() {
 
           if (route.name === "Chat") {
             iconName = focused ? "chat" : "chat-outline";
-          } else if (route.name === "Assistants") {
-            iconName = focused ? "robot" : "robot-outline";
           } else if (route.name === "Settings") {
             iconName = focused ? "cog" : "cog-outline";
-          }else if (route.name === "OfflineSearch") {
+          } else if (route.name === "OfflineSearch") {
             iconName = focused ? "file-search" : "file-search-outline";
           }
 
@@ -37,16 +35,10 @@ function BottomTabNav() {
         },
       })}
     >
-      
       <Tab.Screen
         name="Chat"
         component={ChatScreenNav}
         options={{ headerShown: false, title: t("ChatTab") }}
-      />
-      <Tab.Screen
-        name="Assistants"
-        component={AssistantsScreenNav}
-        options={{ headerShown: false, title: t("AssistantsTab") }}
       />
       <Tab.Screen
         name="OfflineSearch"

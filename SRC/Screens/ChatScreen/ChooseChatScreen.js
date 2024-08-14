@@ -1,5 +1,18 @@
 import React, { useState, useEffect, useCallback, useContext } from "react";
-import { View, StyleSheet, FlatList, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  Text,
+  Image,
+  TouchableOpacity,
+  TextInput,
+  KeyboardAvoidingView,
+  ScrollView,
+} from "react-native";
+import AppButton from "../../Components/AppButton";
+import colors from "../../config/colors";
+import AppText from "../../Components/AppText";
 import AssistantsMenuItem from "../../Components/AssistantsComponents/AssistantsMenuItem";
 import Screen from "../../Components/Screen";
 import { fetchAssistants, insertChat } from "../../database";
@@ -10,6 +23,7 @@ import { useTranslation } from "react-i18next";
 
 function ChooseChatScreen({ navigation }) {
   const { t } = useTranslation();
+  const [name, setName] = useState("");
   const { dbInitialized } = useContext(DatabaseContext);
   const [assistants, setAssistants] = useState([]);
 

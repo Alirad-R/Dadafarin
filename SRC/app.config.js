@@ -1,0 +1,50 @@
+export default ({ config }) => ({
+    ...config,
+    name: "Dadafarin",
+    slug: "dadafarin",
+    version: "1.0.1",
+    runtimeVersion: "1.0.4",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    userInterfaceStyle: "light",
+    splash: {
+      image: "./assets/splash.png",
+      resizeMode: "contain",
+      backgroundColor: "#ffffff"
+    },
+    assetBundlePatterns: ["**/*"],
+    ios: {
+      supportsTablet: true,
+      usesIcloudStorage: true,
+      bundleIdentifier: "com.amin04.SRC",
+    },
+    android: {
+      adaptiveIcon: {
+        foregroundImage: "./assets/adaptive-icon.png",
+        backgroundColor: "#ffffff"
+      },
+      package: "com.amin04.SRC"
+    },
+    web: {
+      favicon: "./assets/favicon.png"
+    },
+    extra: {
+      eas: {
+        projectId: "f3b394a8-3960-4dc2-be79-68cbba0851f6"
+      },
+      router: {
+        origin: false
+      }
+    },
+    updates: {
+      url: "https://u.expo.dev/f36a631d-a4fc-4389-b325-84364c9deb7e"
+    },
+    plugins: [
+      "expo-router",
+      "expo-document-picker",
+      "expo-asset",
+      "expo-secure-store"
+    ],
+    owner: "alirad"
+  });
+  

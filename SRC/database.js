@@ -16,6 +16,7 @@ export const initDB = async () => {
         CREATE TABLE IF NOT EXISTS ChatItems (
           Id INTEGER PRIMARY KEY AUTOINCREMENT, 
           threadId TEXT,
+          name TEXT,
           assistantId TEXT,
           lastMessage TEXT
         );
@@ -43,15 +44,15 @@ export const initDB = async () => {
   });
 };
 
-export const insertChat = async (threadId, assistantId, lastMessage) => {
+export const insertChat = async (threadId, assistantId, lastMessage, name) => {
   return new Promise(async (resolve, reject) => {
     try {
       if (!db) {
         throw new Error("Database is not initialized");
       }
       const result = await db.runAsync(
-        "INSERT INTO ChatItems (threadId, assistantId, lastMessage) VALUES (?, ?, ?)",
-        [threadId, assistantId, lastMessage]
+        "INSERT INTO ChatItems (threadId, assistantId, lastMessage, name) VALUES (?, ?, ?)",
+        [threadId, assistantId, lastMessage, name]
       );
       console.log("ChatItem created successfully");
       resolve(result);
